@@ -1,0 +1,12 @@
+version: '3.0'
+services:
+  catalyst_api:
+    container_name: catalyst_api
+    build: .
+    ports:
+      - 7788:7788
+    restart: on-failure
+    volumes:
+      - ./:/app/
+    env_file:
+      - .env
